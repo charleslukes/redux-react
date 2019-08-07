@@ -18,3 +18,17 @@ For an action to occur redux uses the dispatch function to trigger an  action.
 You can access the current state of the application using getState()
 Redux implements the subscribe to listen for changes.
 
+React-redux is a small library for connectig react in an efficiently way... The major function to take note 
+of is the connect.
+The connect, connects react components with the redux store.
+You use connect with two or three arguments depending on the use case.
+
+The fundamental things to know are the: mapStateToProps and mapDispatchToPros functions.
+
+mapStateToProps function connects a part of the redux state to the props of a react component. By doing so a connected 
+react component will have access to the exact part of the store it needs.
+
+mapDispatchToPros function works similarly but for actions, it connects redux actions to react props.
+
+To start of connecting redux with react you use the Provider which is an higher order component from react-redux
+The Provider wrap your react app and make it aware of the redux sttore.
