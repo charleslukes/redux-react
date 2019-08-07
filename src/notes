@@ -1,0 +1,20 @@
+Redux has three process 
+which are actions => reducer => store.
+
+The store is Just a place that handles all the state the app need. 
+when creating a store it takes a reducer as it first argument.
+
+const store = createStore(rootReducer); 
+
+The reducer is just a pure function in react and their produce new states when there is an 
+update in the state of the app. One principle of redux is never to mutate states. so the initial state of 
+your app should never be changed.
+
+For the reducer to function it needs an action.
+The action is just an object, it defines the kind of operation it wants to execute.
+It is best practice to put the actions in a function.
+
+For an action to occur redux uses the dispatch function to trigger an  action.
+You can access the current state of the application using getState()
+Redux implements the subscribe to listen for changes.
+
