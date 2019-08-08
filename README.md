@@ -4,8 +4,9 @@ app.
 
 
 to see how it functions:      
-__clone the repo :__
-https://github.com/charleslukes/redux-react     
+__clone the repo :__    
+
+git clone https://github.com/charleslukes/redux-react     
 
 go into the project directory and run:
 ### `npm start`
