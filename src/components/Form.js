@@ -11,7 +11,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const ConnectedForm = (props) => {
 
-  const [title, setTitle] = useState({title: ''});
+  const [newtitle, setTitle] = useState({title: ''});
 
   const handleChange = (e) => {
     setTitle({[e.target.id]: e.target.value})
@@ -20,7 +20,7 @@ const ConnectedForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const id = uuidv1();
-    const value = title.title;
+    const value = newtitle.title;
     props.addArticles({ value, id });
     setTitle({title: ''});
   }
@@ -33,7 +33,7 @@ const ConnectedForm = (props) => {
             type="text"
             className="form-control"
             id="title"
-            value={title.title}
+            value={newtitle.title}
             onChange={handleChange}
           />
       </div>
