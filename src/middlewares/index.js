@@ -1,5 +1,4 @@
 import {ADD_ARTICLE} from '../action/constants';
-import {DATA_LOADED} from '../action/constants';
 
 const forbiddenWords = ['spam', 'money'];
 
@@ -19,15 +18,16 @@ export const forbidden = ({dispatch}) => {
   }
 }
 
+//uncomment and import in Post component if you want use redux thunk
 
-export const getData =  () => {
-  return async(dispatch) => {
-    try {
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const json = await res.json();
-    return dispatch({type: DATA_LOADED, payload: json});
-    } catch (error) {
-      return dispatch({type: DATA_LOADED, payload: 'Error'})
-    }
-  }
-}
+// export const getData =  () => {
+//   return async(dispatch) => {
+//     try {
+//     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+//     const json = await res.json();
+//     return dispatch({type: DATA_LOADED, payload: json});
+//     } catch (error) {
+//       return dispatch({type: DATA_LOADED, payload: 'Error'})
+//     }
+//   }
+// }
