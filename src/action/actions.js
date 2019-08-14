@@ -9,4 +9,8 @@ export const addArticles = (payload) => {
 }
 
 
+export const getData = () => {
+
+  return { type: 'DATA_REQUESTED'}
+}
 
