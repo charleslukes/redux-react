@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
-import {getData} from '../middlewares/index'
+import {getData} from '../action/actions'
 
 const Post = ({getData, articles}) => {
-  
+
   useEffect (() => {
     getData();
   }, [getData])
